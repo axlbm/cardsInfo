@@ -1,0 +1,155 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 98%);;
+    /* font-size: 15px; */
+}
+
+.container {
+    width: 85%;
+    margin: 50px auto;
+    margin-bottom: 0;
+}
+
+/* main content section */
+.main-container__text {
+
+   text-align: center;
+}
+.main-container__text h1 {
+    font-weight: 200;
+    font-size: 34px;
+    margin-bottom:5px;
+}
+.main-container__text h2 {
+    font-size: 36px;
+    margin: 0;
+}
+.main-container__text span {
+    font-weight: 400;
+}
+
+.main-container__text p {
+    color: hsl(0, 0%, 55%);
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,25%);
+    grid-template-areas:
+        "supervisor team calculator"
+        "supervisor karma calculator";
+    grid-gap: 2vw;
+
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vw;
+   
+
+}
+.subgrid-container {
+    width: 85%;
+    margin: 0 auto;
+}
+.cardOne {
+    grid-area: team;
+    border-top: 4px solid hsl(0, 78%, 62%);
+
+}
+
+.cardTwo {
+    grid-area: supervisor;
+    border-top: 4px solid hsl(180, 62%, 55%);
+   
+}
+
+
+
+.cardThree {
+    
+    grid-area: calculator;
+    border-top: 4px solid hsl(212, 86%, 64%);
+
+}
+
+.cardFour {
+    grid-area: karma;
+    border-top: 4px solid hsl(34, 97%, 64%);
+    grid-column-start: 2;
+}
+.cards {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    /* margin-bottom: 40px; */
+    height: 250px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    position: static;
+}
+
+.cards p {
+    /* padding-top: 5px; */
+    line-height: 25px;
+    font-size: 12px;
+    margin: 0;
+    color: hsl(0, 0%, 55%);
+}
+
+.cards h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+
+ .img-container {
+     height: 20%;
+     top: 65px;
+     position: relative;
+     text-align: right;
+ }
+ @media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+ }
+
+@media screen and (max-width: 1023px) {
+    .container {
+        width: 80vw;
+    }
+    .main-container__text h1 {
+        font-size: 20px;
+    }
+
+    .main-container__text h2 {
+        font-size: 21px;
+    }
+
+    .main-container__text p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    br {
+        display: none;
+    }
+    .grid {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+     .cards {
+        margin-top: 2em;
+        height: 225px;
+    }
+    .cards p {
+      font-size: 16px;
+    }
+
+    .img-container {
+        height: 10%;
+        top: 30px;
+    }
+
+}
